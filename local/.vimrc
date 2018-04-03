@@ -140,7 +140,6 @@ map <C-n> :NERDTreeToggle<CR>
 let anyfold_activate=1
 set foldlevel=10
 
-" deimos-specific
 let NERDTreeIgnore=['\.pyc$', '\~$', '\.swp$', '\coverage']
 map , jA,k
 
