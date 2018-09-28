@@ -1,0 +1,13 @@
+# .desktoprc for linuslee@ocf.berkeley.edu
+#
+# Spotify Fall 2018 WDD playlist: https://open.spotify.com/playlist/1ev3rL1sHli29YxCpXF61u
+
+# Copy dotfiles
+cp ~/remote/dotfiles/client_ocf/{.tmux.conf, .vimrc, .zshrc, *.sh} ~/
+
+# Symlink VIM plugins from tsunami, so we can use plugins from client
+ln -s ~/remote/.vim/ ~/.vim/
+
+# Swap CAPS LOCK and ESCAPE on XFCE4
+setxkbmap -option caps:swapescape
+
