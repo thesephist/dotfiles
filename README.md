@@ -18,6 +18,12 @@ These assume I'm accessing the environment through SSH or another shell rather t
 
 Configurations here will favor performance, simplicity, low dependency on third-party code over convenience and rich user interfaces.
 
+## ocf/
+
+These files are very specifically for configuring the UC Berkeley's [Open Computing Facility workstations](https://www.ocf.berkeley.edu/).
+
+OCF workstations are thin clients that load configurations from an NFS volume on login, and these dotfiles are copied over to the local tempfs for the session.
+
 ## sh/
 
 These files are utility shell scripts that can work in a lot of different settings. The use case of each will be detailed within the script.
