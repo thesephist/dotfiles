@@ -3,10 +3,16 @@
 # Spotify Fall 2018 WDD playlist: https://open.spotify.com/playlist/1ev3rL1sHli29YxCpXF61u
 
 # Copy dotfiles
-cp ~/remote/dotfiles/ocf/{.tmux.conf, .vimrc, .zshrc, *.sh} ~/
+cp ~/remote/dotfiles/ocf/.tmux.conf ~/
+cp ~/remote/dotfiles/ocf/.vimrc ~/
+cp ~/remote/dotfiles/ocf/.zshrc ~/
+
+# Symlink local SSH configurations to remote
+rm -rf ~/.ssh/
+ln -s ~/remote/.ssh/ ~/.ssh
 
 # Symlink VIM plugins from tsunami, so we can use plugins from client
-ln -s ~/remote/.vim/ ~/.vim/
+ln -s ~/remote/.vim/ ~/.vim
 
 # Swap CAPS LOCK and ESCAPE on XFCE4
 setxkbmap -option caps:swapescape

@@ -22,7 +22,7 @@ Configurations here will favor performance, simplicity, low dependency on third-
 
 These files are very specifically for configuring the UC Berkeley's [Open Computing Facility workstations](https://www.ocf.berkeley.edu/).
 
-OCF workstations are thin clients that load configurations from an NFS volume on login, and these dotfiles are copied over to the local tempfs for the session.
+OCF workstations are thin clients that load configurations from an NFS volume on login, and these dotfiles are copied over to the local sshfs for the session.
 
 ## sh/
 
