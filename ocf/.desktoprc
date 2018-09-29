@@ -6,6 +6,7 @@
 cp ~/remote/dotfiles/ocf/.tmux.conf ~/
 cp ~/remote/dotfiles/ocf/.vimrc ~/
 cp ~/remote/dotfiles/ocf/.zshrc ~/
+cp ~/remote/.gitconfig ~/
 
 # Symlink local SSH configurations to remote
 rm -rf ~/.ssh/
