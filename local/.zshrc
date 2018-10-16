@@ -19,7 +19,7 @@ compinit
 printf '=== SL/T ===\n'
 
 # git aliases FTW
-alias ls="ls -lhaFG"
+alias ls="ls -haFG"
 alias g="git"
 alias gs="git status"
 alias ga="git add ."
