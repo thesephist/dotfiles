@@ -20,6 +20,7 @@ printf '=== SL/T ===\n'
 
 # git aliases FTW
 alias ls="ls -haFG --color"
+alias tmux="tmux -2"
 alias g="git"
 alias gs="git status"
 alias ga="git add ."
