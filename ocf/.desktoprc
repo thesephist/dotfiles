@@ -15,6 +15,10 @@ ln -s ~/remote/.ssh/ ~/.ssh
 # Symlink VIM plugins from tsunami, so we can use plugins from client
 ln -s ~/remote/.vim/ ~/.vim
 
+# Few other symlinks for PATH and rust CLIs
+ln -s ~/remote/.cargo/ ~/.cargo
+ln -s ~/remote/.profile ~/.profile
+
 # Swap CAPS LOCK and ESCAPE on XFCE4
 setxkbmap -option caps:swapescape
 
