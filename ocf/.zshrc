@@ -19,7 +19,7 @@ compinit
 printf '=== SL/T ===\n'
 
 # git aliases FTW
-alias ls="ls -lhaFG"
+alias ls="ls -haFG --color"
 alias g="git"
 alias gs="git status"
 alias ga="git add ."
@@ -41,6 +41,9 @@ alias test="npm test"
 alias tes="npm test"
 alias est="npm test"
 alias tst="npm test"
+
+alias cat="bat"
+alias ls="exa"
 
 # Yarn env vars
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
