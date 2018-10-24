@@ -19,7 +19,7 @@ compinit
 printf '=== SL/T ===\n'
 
 # git aliases FTW
-alias ls="ls -haFG --color"
+alias ls="ls -haFG --color" # NOTE: macOS's default ls doesn't take the --color flag
 alias tmux="tmux -2"
 alias g="git"
 alias gs="git status"
