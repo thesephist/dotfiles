@@ -46,3 +46,9 @@ alias tst="npm test"
 # Yarn env vars
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# Trash function for the CLI shell, instead of rm
+function trash () {
+    mkdir -p ~/.trash/
+    mv "$@" ~/.trash/
+}
+
