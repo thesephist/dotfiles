@@ -2,7 +2,7 @@
 setopt autocd
 
 # My workstations are mostly Macs. If Linux/BSD, this line needs changed.
-zstyle :compinstall filename '/Users/thesephist/.zshrc'
+zstyle :compinstall filename '/home/l/li/linuslee/'
 
 # git repo statusline
 autoload -Uz vcs_info
@@ -43,7 +43,7 @@ alias est="npm test"
 alias tst="npm test"
 
 alias cat="bat"
-alias ls="exa"
+alias ls="exa -haFG"
 
 # Yarn env vars
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
