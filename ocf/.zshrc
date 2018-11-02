@@ -10,7 +10,6 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 RPROMPT=\$vcs_info_msg_0_
-PATH=$PATH:/Users/thesephist/bin
 autoload -Uz compinit
 export PS1="
 [%D|%*] %m%d%%
