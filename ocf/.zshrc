@@ -19,6 +19,7 @@ printf '=== SL/T ===\n'
 
 # git aliases FTW
 alias ls="ls -haFG --color"
+alias tmux="tmux -2"
 alias g="git"
 alias gs="git status"
 alias ga="git add ."
@@ -46,4 +47,7 @@ alias ls="exa -haFG"
 
 # Yarn env vars
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# OCF lab workstations' desktoprc source .profile too early, so source it again
+source ~/.profile
 
