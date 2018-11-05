@@ -10,7 +10,6 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 RPROMPT=\$vcs_info_msg_0_
-PATH=$PATH:/Users/thesephist/bin
 autoload -Uz compinit
 export PS1="
 [%D|%*] %m%d%%
@@ -20,6 +19,7 @@ printf '=== SL/T ===\n'
 
 # git aliases FTW
 alias ls="ls -haFG --color"
+alias tmux="tmux -2"
 alias g="git"
 alias gs="git status"
 alias ga="git add ."
@@ -47,4 +47,7 @@ alias ls="exa -haFG"
 
 # Yarn env vars
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# OCF lab workstations' desktoprc source .profile too early, so source it again
+source ~/.profile
 

@@ -137,7 +137,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 
 " vim-anyfold
-let anyfold_activate=1
+let AnyFoldActivate=1
 set foldlevel=10
 
 let NERDTreeIgnore=['\.pyc$', '\~$', '\.swp$', '\coverage']
