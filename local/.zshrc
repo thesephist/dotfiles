@@ -2,7 +2,7 @@
 setopt autocd
 
 # My workstations are mostly Macs. If Linux/BSD, this line needs changed.
-zstyle :compinstall filename '/Users/thesephist/.zshrc'
+zstyle :compinstall filename '/home/thesephist/.zshrc'
 
 # git repo statusline
 autoload -Uz vcs_info
@@ -36,15 +36,6 @@ alias vi="vim -u NONE"
 
 # lol
 alias idk="printf \"¯\_(ツ)_/¯\" | pbcopy && echo \"¯\_(ツ)_/¯ copied to clipboard\""
-
-# I can't type for shit
-alias test="npm test"
-alias tes="npm test"
-alias est="npm test"
-alias tst="npm test"
-
-# Yarn env vars
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Trash function for the CLI shell, instead of rm
 function trash () {
