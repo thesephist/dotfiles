@@ -36,6 +36,7 @@ alias vi="vim -u NONE"
 
 # lol
 alias youtube-dl="youtube-dl -f 'mp4[height>=?720]'"
+alias audio-dl="youtube-dl -x --prefer-ffmpeg --audio-format=mp3"
 alias idk="printf \"¯\_(ツ)_/¯\" | pbcopy && echo \"¯\_(ツ)_/¯ copied to clipboard\""
 
 # Trash function for the CLI shell, instead of rm
