@@ -35,6 +35,7 @@ alias ghr="git reset --hard HEAD"
 alias vi="vim -u NONE"
 
 # lol
+alias youtube-dl="youtube-dl -f 'mp4[height>=?720]'"
 alias idk="printf \"¯\_(ツ)_/¯\" | pbcopy && echo \"¯\_(ツ)_/¯ copied to clipboard\""
 
 # Trash function for the CLI shell, instead of rm
