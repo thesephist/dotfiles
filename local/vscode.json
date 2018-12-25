@@ -1,0 +1,18 @@
+{
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.fontFamily": "\"Fira Code\", Menlo, Monaco, 'Courier New', monospace",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "files.exclude": {
+        "**/*.swp": true
+    },
+    "window.zoomLevel": 1,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "editor.fontLigatures": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.renderControlCharacters": true,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.parameterHints.enabled": false,
+    "telemetry.enableTelemetry": false
+}
