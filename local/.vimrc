@@ -148,3 +148,6 @@ let g:javascript_plugin_jsdoc=1
 set path=./**
 set wildignore+=**/coverage/**,**/node_modules/**
 
+" Addresses some vim redraw issues inside 256color terminals
+set term=xterm-256color
+
