@@ -35,6 +35,7 @@ alias ghr="git reset --hard HEAD"
 alias vi="vim -u NONE"
 
 # lol
+alias less="less -R"
 alias youtube-dl="youtube-dl -f 'mp4[height>=?720]'"
 alias audio-dl="youtube-dl -x --prefer-ffmpeg --audio-format=mp3"
 alias idk="printf \"¯\_(ツ)_/¯\" | pbcopy && echo \"¯\_(ツ)_/¯ copied to clipboard\""
