@@ -20,9 +20,9 @@ Plugin 'pseewald/vim-anyfold' " smarter line folding
 Plugin 'scrooloose/nerdtree' " smarter file explorer
 Plugin 'Xuyuanp/nerdtree-git-plugin' " show git statuses for files in NERDTree
 Plugin 'vim-airline/vim-airline' " airline theme for vim status line
-Plugin 'sheerun/vim-polyglot' " solid language pack
 Plugin 'mattn/emmet-vim' " emmet expander for HTML / CSS
 Plugin 'pangloss/vim-javascript' " JavaScript enhancements, including jsdoc
+Plugin 'fatih/vim-go' " Go language support
 
 " If used inside Tmux, this shows the vim airline statusline in Tmux's
 " statusline
