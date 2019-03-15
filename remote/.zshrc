@@ -8,6 +8,7 @@ compinit
 
 alias ls="ls -haFG --color"
 alias tmux="tmux -2"
+alias less="less -R"
 alias g="git"
 alias gs="git status"
 alias ga="git add ."

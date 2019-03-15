@@ -140,7 +140,7 @@ map <C-n> :NERDTreeToggle<CR>
 let AnyFoldActivate=1
 set foldlevel=10
 
-let NERDTreeIgnore=['\.pyc$', '\~$', '\.swp$', '\coverage']
+let NERDTreeIgnore=['\.pyc$', '\~$', '\.swp$', 'coverage']
 map , jA,k
 
 let g:javascript_plugin_jsdoc=1
@@ -148,6 +148,6 @@ let g:javascript_plugin_jsdoc=1
 set path=./**
 set wildignore+=**/coverage/**,**/node_modules/**
 
-" Addresses some vim redraw issues inside 256color terminals
+" Addresses some vim redraw issues inside 256color terminals (tmux)
 set term=xterm-256color
 
