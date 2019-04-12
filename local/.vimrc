@@ -72,7 +72,8 @@ filetype indent on
 map ss :setlocal spell!<cr>
 map ff :DiffOrig<cr>
 map fh :set guifont=Fira\ Code:h11<cr>
-map fl :set guifont=Fira\ Code:h16<cr>
+map fk :set guifont=Fira\ Code:h16<cr>
+map fl :set guifont=Fira\ Code:h20<cr>
 map yy :setlocal list!<cr>
 map U :b#<cr>
 map W <C-w>
