@@ -23,6 +23,7 @@ Plugin 'vim-airline/vim-airline' " airline theme for vim status line
 Plugin 'mattn/emmet-vim' " emmet expander for HTML / CSS
 Plugin 'pangloss/vim-javascript' " JavaScript enhancements, including jsdoc
 Plugin 'fatih/vim-go' " Go language support
+Plugin 'crusoexia/vim-monokai' " Monokai color theme
 
 " If used inside Tmux, this shows the vim airline statusline in Tmux's
 " statusline
@@ -92,7 +93,7 @@ endif
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 " Plugin commands
-:colorscheme onedark
+
 " air-line
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
@@ -141,14 +142,8 @@ map <C-n> :NERDTreeToggle<CR>
 let AnyFoldActivate=1
 set foldlevel=10
 
-let NERDTreeIgnore=['\.pyc$', '\~$', '\.swp$', 'coverage']
-map , jA,k
-
-let g:javascript_plugin_jsdoc=1
-
-set path=./**
-set wildignore+=**/coverage/**,**/node_modules/**
-
-" Addresses some vim redraw issues inside 256color terminals (tmux)
+" Addresses some vim redraw issues inside 256color terminals
 set term=xterm-256color
+
+colorscheme monokai
 
