@@ -20,5 +20,7 @@ alias gb="git branch"
 alias gk="git checkout"
 alias gl="git log --oneline"
 alias ghr="git reset --hard HEAD"
+alias gsh="git push"
+alias gll="git pull"
 alias vi="vim -u NONE"
 
