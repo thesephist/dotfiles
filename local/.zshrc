@@ -48,3 +48,13 @@ function trash () {
     mv "$@" ~/.trash/
 }
 
+# For some reason, Alacritty has trouble picking up the right PATHs
+export PATH=$PATH:/Users/thesephist/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/thesephist/bin
+export HISTSIZE=1000
+
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH=$PATH:$HOME/go/bin
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+
