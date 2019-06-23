@@ -91,6 +91,8 @@ if !exists(":DiffOrig")
 endif
 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
+" ink is my personal programming language: https://linus.zone/ink
+autocmd BufNewFile,BufRead *.ink set filetype=ink
 
 " Plugin commands
 
