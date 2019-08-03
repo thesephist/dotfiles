@@ -28,3 +28,5 @@ alias audio-dl="youtube-dl -x --prefer-ffmpeg --audio-format=mp3"
 set -x fish_user_paths $HOME/go/bin $HOME/.cargo/bin $fish_user_paths
 set -x GOPATH $HOME/go
 set -x GOBIN $HOME/go/bin
+
+fish_vi_key_bindings
