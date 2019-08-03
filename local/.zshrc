@@ -57,4 +57,3 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=$PATH:$HOME/go/bin
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
-
