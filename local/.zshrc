@@ -1,8 +1,9 @@
 # If just typing in a dir, cd to it
 setopt autocd
 
-# My workstations are mostly Macs. If Linux/BSD, this line needs changed.
-zstyle :compinstall filename '/home/thesephist/.zshrc'
+# My workstations are mostly Macs. If Linux/BSD, this line needs changed
+# to be /home/thesephist/.zshrc instead.
+zstyle :compinstall filename '/Users/thesephist/.zshrc'
 
 # git repo statusline
 autoload -Uz vcs_info
@@ -36,23 +37,15 @@ alias gsh="git push"
 alias gll="git pull"
 alias vi="vim -u NONE"
 
-# lol
+# auxiliary aliases
 alias less="less -R"
 alias youtube-dl="youtube-dl -f 'mp4[height>=?720]'"
 alias audio-dl="youtube-dl -x --prefer-ffmpeg --audio-format=mp3"
 alias idk="printf \"¯\_(ツ)_/¯\" | pbcopy && echo \"¯\_(ツ)_/¯ copied to clipboard\""
 
-# Trash function for the CLI shell, instead of rm
-function trash () {
-    mkdir -p ~/.trash/
-    mv "$@" ~/.trash/
-}
-
+export HISTSIZE=1000
 # For some reason, Alacritty has trouble picking up the right PATHs
 export PATH=$PATH:/Users/thesephist/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/thesephist/bin
-export HISTSIZE=1000
-
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=$PATH:$HOME/go/bin
 export GOPATH=$HOME/go
