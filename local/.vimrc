@@ -60,6 +60,7 @@ set scrolloff=4
 set incsearch
 set magic
 set number
+set relativenumber
 set ai
 
 " tab and whitespace options
@@ -72,9 +73,9 @@ filetype indent on
 " shortcuts
 map ss :setlocal spell!<cr>
 map ff :DiffOrig<cr>
-map fh :set guifont=Fira\ Code:h11<cr>
-map fk :set guifont=Fira\ Code:h16<cr>
-map fl :set guifont=Fira\ Code:h20<cr>
+map fh :set guifont=Dank\ Mono:h11<cr>
+map fk :set guifont=Dank\ Mono:h16<cr>
+map fl :set guifont=Dank\ Mono:h20<cr>
 map yy :setlocal list!<cr>
 map U :b#<cr>
 map W <C-w>
@@ -91,8 +92,8 @@ if !exists(":DiffOrig")
 endif
 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
-" ink is my personal programming language: https://linus.zone/ink
 autocmd BufNewFile,BufRead *.ink set filetype=ink
+autocmd BufNewFile,BufRead *.xin set filetype=xin
 
 " Plugin commands
 
@@ -148,4 +149,3 @@ set foldlevel=10
 set term=xterm-256color
 
 colorscheme monokai
-
