@@ -1,11 +1,11 @@
 {
-    "workbench.colorTheme": "One Dark Pro",
-    "editor.fontFamily": "\"Fira Code\", Menlo, Monaco, 'Courier New', monospace",
+    "workbench.colorTheme": "Monokai",
+    "editor.fontFamily": "\"Dank Mono\", \"Fira Code\", Menlo, Monaco, 'Courier New', monospace",
     "editor.multiCursorModifier": "ctrlCmd",
     "files.exclude": {
         "**/*.swp": true
     },
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
     "editor.fontLigatures": true,
@@ -14,5 +14,23 @@
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": true,
     "editor.parameterHints.enabled": false,
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDelete": false,
+    "terminal.integrated.rendererType": "dom",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.fontSize": 14,
+    "go.useLanguageServer": true,
+    "explorer.confirmDragAndDrop": false,
+    "[js]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "eslint.format.enable": true,
 }
