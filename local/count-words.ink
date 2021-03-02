@@ -18,21 +18,23 @@ trim := str.trim
 	- thesephist.com
 	- linus.coffee
 	- dotink.co
+	- guides.thesephist.com
 	- zerotocode.org `
 HugoRepos := [
 	'www'
 	'coffee'
 	'dotink'
+	'guides'
 	'zerotocode'
 ]
 
 withRepoCount := (repo, cb) => exec(
 	'sh'
-	['-c', f('cat ~/src/{{ 0 }}/content/**/*.md | wc -w', [repo])]
+	['-c', f('cat ~/src/{{ 0 }}/content/*.md ~/src/{{ 0 }}/content/**/*.md | wc -w', [repo])]
 	''
 	evt => evt.type :: {
 		'data' -> (
-			stdout := trim(evt.data, char(10))
+			stdout := trim(trim(evt.data, char(10)), ' ')
 			(number(stdout) :: {
 				() -> log(f('exec error: could not convert result ({{ 0 }}) to number', [stdout]))
 				_ -> (
