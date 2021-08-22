@@ -14,7 +14,7 @@ brew update && brew upgrade
 brew install zsh git vim emacs wget nodejs npm ruby python python3 youtube-dl golang make htop tmux gcc
 
 # install global npm packages
-sudo npm i -g pm2 yarn json-server gulp surge node-static
+sudo npm i -g yarn surge node-static
 
 # configure shell
 chsh -s /bin/zsh
@@ -33,6 +33,8 @@ defaults write com.apple.finder AppleShowAllFiles true
 #   expand save panel by default
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true && \
 defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
+#   disable mouse acceleration
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
 #   show scrollbar only when it makes sense
 defaults write -g AppleShowScrollBars -string "WhenScrolling"
 #   prefer disk over iCloud
@@ -44,8 +46,8 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool true
 defaults write -g KeyRepeat -int 0.02
-#   screenshots to ~/Dropbox/Screenshots/
-defaults write com.apple.screencapture location ~/Dropbox/Screenshots && \
+#   screenshots to ~/Downloads
+defaults write com.apple.screencapture location ~/Downloads && \
 killall SystemUIServer
 #   update software as available
 sudo softwareupdate -ia
