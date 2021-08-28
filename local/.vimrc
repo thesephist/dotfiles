@@ -93,6 +93,8 @@ endif
 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.ink set filetype=ink
+autocmd BufNewFile,BufRead *.oak set filetype=oak
+autocmd BufNewFile,BufRead *.klisp set filetype=klisp
 autocmd BufNewFile,BufRead *.xin set filetype=xin
 
 " Plugin commands
