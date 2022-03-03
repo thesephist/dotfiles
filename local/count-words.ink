@@ -14,17 +14,19 @@ f := std.format
 cat := std.cat
 trim := str.trim
 
-` Repositories of Hugo repositories I'm counting. This so far covers:
+` List of content repositories I'm counting. This so far covers:
 	- thesephist.com
 	- linus.coffee
 	- dotink.co
 	- guides.thesephist.com
+	- oaklang.org
 	- zerotocode.org `
-HugoRepos := [
+ContentRepos := [
 	'www'
 	'coffee'
 	'dotink'
 	'guides'
+	'oak/www'
 	'zerotocode'
 ]
 
@@ -48,10 +50,10 @@ withRepoCount := (repo, cb) => exec(
 	}
 )
 
-(sub := (i, count) => HugoRepos.(i) :: {
+(sub := (i, count) => ContentRepos.(i) :: {
 	() -> log(f('Total word count in {{0}}:{{2}}{{1}}'
-		[cat(HugoRepos, ', '), count, char(10) + char(9)]))
-	_ -> withRepoCount(HugoRepos.(i), repoCount => (
+		[cat(ContentRepos, ', '), count, char(10) + char(9)]))
+	_ -> withRepoCount(ContentRepos.(i), repoCount => (
 		sub(i + 1, count + repoCount)
 	))
 })(0, 0)
