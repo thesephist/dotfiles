@@ -1,0 +1,35 @@
+#!/usr/bin/env oak
+
+std := import('std')
+str := import('str')
+fmt := import('fmt')
+sort := import('sort')
+fs := import('fs')
+cli := import('cli')
+
+Cli := cli.parse()
+QueryDir := Cli.verb |> std.default('.')
+
+if Cli.opts.h != ? | Cli.opts.help != ? -> {
+	std.println('usage: dirstat <some_dir>')
+	exit(0)
+}
+
+if files := fs.listFiles(QueryDir) {
+	? -> {
+		fmt.printf('error: could not read directory "{{0}}"', QueryDir)
+		exit(1)
+	}
+	_ -> {
+		fmt.printf('Total {{0}} files:', len(files))
+		files |>
+			std.exclude(:dir) |> // exclude folders
+			std.exclude(fn(f) f.name |> str.startsWith?('.')) |> // exclude dotfiles
+			std.map(fn(f) f.name |> str.split('.') |> std.slice(1) |> std.last()) |> // get file extensions
+			std.compact() |> // exclude files without extensions
+			sort.sort() |> std.partition(std.identity) |> // sort and group by extension
+			sort.sort(len) |> // sort by frequency
+			std.reverse() |> // sort descending
+			std.map(fn(t) '{{0}}\t{{1}}' |> fmt.printf(len(t), t.0)) // print results
+	}
+}
