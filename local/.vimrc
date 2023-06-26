@@ -15,7 +15,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe' " polyglot token-based autocomplete
 Plugin 'jiangmiao/auto-pairs' " pair parens/brackets/braces
 Plugin 'airblade/vim-gitgutter' " show git diff status in the left side gutter
-Plugin 'joshdick/onedark.vim'  " atom-style One Dark color theme
 Plugin 'pseewald/vim-anyfold' " smarter line folding
 Plugin 'scrooloose/nerdtree' " smarter file explorer
 Plugin 'Xuyuanp/nerdtree-git-plugin' " show git statuses for files in NERDTree
@@ -24,6 +23,7 @@ Plugin 'mattn/emmet-vim' " emmet expander for HTML / CSS
 Plugin 'pangloss/vim-javascript' " JavaScript enhancements, including jsdoc
 Plugin 'fatih/vim-go' " Go language support
 Plugin 'crusoexia/vim-monokai' " Monokai color theme
+Plugin 'thesephist/parinfer-rust' " Parinfer for Vim + Klisp
 
 " If used inside Tmux, this shows the vim airline statusline in Tmux's
 " statusline
@@ -60,7 +60,6 @@ set scrolloff=4
 set incsearch
 set magic
 set number
-set relativenumber
 set ai
 
 " tab and whitespace options
@@ -132,7 +131,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " NerdTREE
-" auto-open on open of directlry
+" auto-open on open of directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 " close if only tree is open
@@ -142,6 +141,9 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " key map to Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
+map <C-h> :tabp<CR>
+map <C-i> :tabn<CR>
+map <C-o> :tabnew<CR>
 
 " vim-anyfold
 let AnyFoldActivate=1
@@ -151,3 +153,5 @@ set foldlevel=10
 set term=xterm-256color
 
 colorscheme monokai
+set nowritebackup " for Oak tools that watch filesystem
+
