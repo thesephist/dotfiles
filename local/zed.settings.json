@@ -35,5 +35,10 @@
     "dark": "One Dark"
   },
   "format_on_save": "off",
-  "formatter": "prettier"
+  "formatter": "prettier",
+  "languages": {
+    "TypeScript": {
+      "tab_size": 2
+    }
+  }
 }
