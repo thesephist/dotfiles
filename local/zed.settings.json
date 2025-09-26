@@ -39,6 +39,18 @@
   "languages": {
     "TypeScript": {
       "tab_size": 2
+    },
+    "TSX": {
+      "tab_size": 2
+    }
+  },
+  "lsp": {
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "importModuleSpecifier": "relative"
+        }
+      }
     }
   }
 }
