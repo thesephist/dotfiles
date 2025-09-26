@@ -1,0 +1,25 @@
+#!/usr/bin/env oak
+// Converts a bash-style .env into a fish-style .env.fish
+
+std := import('std')
+str := import('str')
+fmt := import('fmt')
+
+fn ensureQuoted(s) if [std.first(s), std.last(s)] {
+	['"', '"'] -> s
+	['\'', '\''] -> '"{{0}}"' |> fmt.format(s |> str.slice(1, len(s) - 1))
+	_ -> fmt.format('"{{0}}"', s)
+}
+
+input := std.stdin()
+lines := str.split(input, '\n')
+bashLines := lines |> with std.map() fn(line) if {
+	line |> str.startsWith?('#') -> line
+	line |> str.contains?('=') -> {
+		[key, value] := str.cut(line, '=')
+		'set -x {{ 0 }} {{ 1 }}' |> fmt.format(key, ensureQuoted(value))
+	}
+	_ -> line
+}
+bashFile := bashLines |> str.join('\n')
+std.println(bashFile)
