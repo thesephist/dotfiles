@@ -69,6 +69,9 @@ set tabstop=4
 set backspace=start,eol,indent
 filetype indent on
 
+" auto-reload file changes on disk
+set autoread
+
 " shortcuts
 map ss :setlocal spell!<cr>
 map ff :DiffOrig<cr>
@@ -97,6 +100,11 @@ autocmd BufNewFile,BufRead *.klisp set filetype=klisp
 autocmd BufNewFile,BufRead *.xin set filetype=xin
 
 " Plugin commands
+
+" fzf
+set runtimepath+=/opt/homebrew/opt/fzf
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git"'
+nnoremap <C-p> :FZF<CR>
 
 " air-line
 let g:airline_powerline_fonts = 1
