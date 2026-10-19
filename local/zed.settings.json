@@ -1,6 +1,43 @@
 {
+  "enable_language_server": false,
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "agent_servers": {
+    "cursor": {
+      "favorite_config_option_values": {
+        "model": ["composer-2[fast=true]"]
+      },
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry",
+      "default_config_options": {
+        "mode": "auto"
+      }
+    }
+  },
+  "colorize_brackets": true,
   "agent": {
-    "default_profile": "ask"
+    "threads_sidebar": {
+      "position": "right"
+    },
+    "use_modifier_to_send": true,
+    "enable_feedback": false,
+    "dock": "right",
+    "default_width": 520.0,
+    "flexible": false,
+    "message_editor_min_lines": 8,
+    "default_profile": "agent"
   },
   "buffer_font_family": "JetBrains Mono",
   "ui_font_family": ".SystemUIFont",
@@ -32,23 +69,41 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "Monokai-og"
   },
   "format_on_save": "off",
-  "formatter": "prettier",
   "languages": {
+    "JavaScript": {
+      "formatter": "language_server",
+      "language_servers": ["typescript-ls"]
+    },
+    "JSX": {
+      "formatter": "language_server",
+      "language_servers": ["typescript-ls"]
+    },
     "TypeScript": {
-      "tab_size": 2
+      "tab_size": 2,
+      "formatter": "language_server",
+      "language_servers": ["typescript-ls"]
     },
     "TSX": {
-      "tab_size": 2
+      "tab_size": 2,
+      "formatter": "language_server",
+      "language_servers": ["typescript-ls"]
     }
   },
   "lsp": {
-    "typescript-language-server": {
-      "initialization_options": {
-        "preferences": {
-          "importModuleSpecifier": "relative"
+    "typescript-ls": {
+      "settings": {
+        "typescript": {
+          "preferences": {
+            "importModuleSpecifier": "relative"
+          }
+        },
+        "javascript": {
+          "preferences": {
+            "importModuleSpecifier": "relative"
+          }
         }
       }
     }
