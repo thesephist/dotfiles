@@ -1,0 +1,45 @@
+; pull-all
+;
+; Run "git pull" en masse on all git repositories with a default remote under a
+; specific directory.
+
+(defn indent (s bit)
+  (-> s
+      (split '\n')
+      (map (fn (line)
+             (if (empty? line)
+               line
+               (str bit line))))
+      (join '\n')))
+
+(defn git-repo? (path)
+  (! (nil? (fs/stat (path/join path '.git')))))
+
+(defn pull-git-repo! (path)
+  (let (output (exec 'bash'
+                     (list '-c' (-> (str 'cd ' path '\;git pull 2>&1')))
+                     ''))
+    (-> (getc output 'stdout')
+        (indent '  '))))
+
+(defn pull-all (path)
+  (let (entries (fs/ls path))
+    (-> entries
+        (filter (partial getc ? ,dir))
+        (each (fn (it)
+                (let
+                  (name (getc it ,name))
+                  (entry-path (path/join path name))
+                  (if (git-repo? entry-path)
+                    (do
+                      (print '√ pulling' name)
+                      (println ' —' (trim (pull-git-repo! entry-path))))
+                    (println 'x not a git repo:' name))))))))
+
+(defn main ()
+  (let (argv (drop (args) 3))
+    (if (empty? argv)
+      (pull-all '/Users/linuslee/src')
+      (apply pull-all argv))))
+
+(main)
