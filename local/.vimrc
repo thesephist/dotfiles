@@ -20,8 +20,6 @@ Plugin 'scrooloose/nerdtree' " smarter file explorer
 Plugin 'Xuyuanp/nerdtree-git-plugin' " show git statuses for files in NERDTree
 Plugin 'vim-airline/vim-airline' " airline theme for vim status line
 Plugin 'mattn/emmet-vim' " emmet expander for HTML / CSS
-Plugin 'pangloss/vim-javascript' " JavaScript enhancements, including jsdoc
-Plugin 'fatih/vim-go' " Go language support
 Plugin 'crusoexia/vim-monokai' " Monokai color theme
 Plugin 'thesephist/parinfer-rust' " Parinfer for Vim + Klisp
 
