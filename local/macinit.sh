@@ -80,8 +80,8 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 #   key repeat behaviors
 defaults write -g ApplePressAndHoldEnabled -bool false
-#   preserve extremely fast repeat (-int 0.02 stores 0; behavior is undocumented)
-defaults write -g KeyRepeat -int 0.02
+#   preserve extremely fast repeat, beyond configurable in Preferences.app
+defaults write -g KeyRepeat -int 1
 defaults write -g InitialKeyRepeat -int 15
 #   disable typographical assistance
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
