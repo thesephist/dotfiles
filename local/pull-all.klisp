@@ -39,7 +39,7 @@
 (defn main ()
   (let (argv (drop (args) 3))
     (if (empty? argv)
-      (pull-all '/Users/linuslee/src')
+      (pull-all '/Users/thesephist/src')
       (apply pull-all argv))))
 
 (main)
