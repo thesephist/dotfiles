@@ -25,15 +25,11 @@ alias less="less -R" # color
 alias video-dl="yt-dlp -f 'mp4[height>=?720]'"
 alias audio-dl="yt-dlp -x --audio-format=mp3"
 
-fish_add_path $HOME/.local/bin $HOME/go/bin $HOME/.cargo/bin
+fish_add_path $HOME/.local/bin $HOME/go/bin $HOME/.cargo/bin /opt/homebrew/bin /opt/homebrew/sbin
 set -x GOPATH $HOME/go
 set -x GOBIN $HOME/go/bin
 set -x SUPERSTAT_ROOT $HOME/src
 set -x DISABLE_AUTO_HOBGOBLIN_INFRA_UP "1"
-
-# Apple Silicon Homebrew, including keg-only Node.
-fish_add_path /opt/homebrew/bin /opt/homebrew/sbin /opt/homebrew/opt/node@24/bin
-fish_add_path $BUN_INSTALL/bin
 
 fish_vi_key_bindings
 
